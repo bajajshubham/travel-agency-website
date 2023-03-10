@@ -5,14 +5,16 @@ import {
 } from "@mui/icons-material";
 import "./Header.css";
 
-let lang = "en";
+let lang = "En";
 
 const Header = () => {
   return (
     <div className="header">
       <div className="header-top-part">
         <div className="web">
-          <h1>TravelGOat</h1>
+          <h1>
+            Travel<span style={{color: "#E45E35"}}>GO</span>at
+          </h1>
         </div>
         <div className="activity">
           <span>
