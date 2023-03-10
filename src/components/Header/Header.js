@@ -4,6 +4,7 @@ import {
   Language as LanguageIcon,
 } from "@mui/icons-material";
 import "./Header.css";
+import { NavLink } from "react-router-dom";
 
 let lang = "En";
 
@@ -13,7 +14,7 @@ const Header = () => {
       <div className="header-top-part">
         <div className="web">
           <h1>
-            Travel<span style={{color: "#E45E35"}}>GO</span>at
+            Travel<span style={{ color: "#E45E35" }}>GO</span>at
           </h1>
         </div>
         <div className="activity">
@@ -30,10 +31,18 @@ const Header = () => {
         </div>
       </div>
       <div className="header-bottom-part">
-        <div className="nav-items">Home</div>
-        <div className="nav-items">Trips</div>
-        <div className="nav-items">Services</div>
-        <div className="nav-items">Help</div>
+        <NavLink className="nav-items" to="/">
+          Home
+        </NavLink>
+        <NavLink className="nav-items" to="/trips">
+          Trips
+        </NavLink>
+        <NavLink className="nav-items" to="/services">
+          Services
+        </NavLink>
+        <NavLink className="nav-items" to="/help">
+          Help
+        </NavLink>
       </div>
     </div>
   );

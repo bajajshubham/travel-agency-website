@@ -28,6 +28,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.active{
+  text-decoration: underline;
+  text-decoration-color: #E45E35;
+  text-decoration-thickness: 3px;
+  text-decoration-skip-ink: none;
 }
 
 .activity, .web {
