@@ -1,12 +1,12 @@
 .header {
-  height: 150px;
+  height: fit-content;
   background-color: #222222;
   color: #ffffff;
 }
 
 .header-top-part {
-  height: 100px;
-  padding: 20px 50px;
+  height: fit-content;
+  padding: 10px 50px 0px 50px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -20,7 +20,8 @@
 .header-bottom-part {
   display: flex;
   justify-content: center;
-  height: 50px;
+  height: fit-content;
+  padding: 1px;
 }
 
 .nav-items {
