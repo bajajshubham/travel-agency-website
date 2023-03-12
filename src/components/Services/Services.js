@@ -16,13 +16,13 @@ function Services(props) {
       <div className="container">
         <div className="grid-item">
           <p>
-            <h4>
+            <h3>
               {props.lang === "En"
                 ? "1. Wheel Chair"
                 : props.lang === "De"
                 ? "1. Rollstuhl"
                 : "1. व्हील चेयर"}
-            </h4>
+            </h3>
             {props.lang === "En"
               ? `TravelGoat offers wheelchair services tailored specifically for
             individuals with physical disabilities, providing a comfortable and
@@ -56,13 +56,13 @@ function Services(props) {
         </div>
         <div className="grid-item">
           <p>
-            <h4>
+            <h3>
               {props.lang === "En"
                 ? "2. Walker"
                 : props.lang === "De"
                 ? "2. Gehhilfe"
                 : "2. वाकर"}
-            </h4>
+            </h3>
             {props.lang === "En"
               ? `TravelGOat offers walker services tailored specifically for
             individuals with physical disabilities. We provide a range of walker
@@ -94,21 +94,21 @@ function Services(props) {
       <div className="container">
         <div className="grid-item">
           <p>
-            <h3>
+            <h2>
               {props.lang === "En"
                 ? "Transportation Mode"
                 : props.lang === "De"
                 ? "Transportmodus"
                 : "परिवहन मोड"}
-            </h3>
+            </h2>
 
-            <h4>
+            <h3>
               {props.lang === "En"
                 ? "1. Car"
                 : props.lang === "De"
                 ? "1 Auto"
                 : "1. कार"}
-            </h4>
+            </h3>
             {props.lang === "En"
               ? `TravelGOat, our website, provides transportation services that are
             accessible and inclusive to individuals with physical disabilities.
@@ -137,13 +137,14 @@ function Services(props) {
 
         <div className="grid-item">
           <p>
-            <h4>
+            <br/>
+            <h3>
               {props.lang === "En"
                 ? "2. Bus"
                 : props.lang === "De"
                 ? "2. Bus"
                 : "2. बस"}
-            </h4>
+            </h3>
             {props.lang === "En"
               ? ` TravelGOat, our website, is committed to providing accessible
             transportation services for individuals with physical disabilities.
@@ -181,13 +182,13 @@ function Services(props) {
       <div className="container">
         <div className="grid-item">
           <p>
-            <h4>
+            <h3>
               {props.lang === "En"
                 ? "3. Train"
                 : props.lang === "De"
                 ? "3. Zug"
                 : "3. रेलगाड़ी"}
-            </h4>
+            </h3>
             {props.lang === "En"
               ? ` At TravelGOat, our website offers inclusive and accessible
             transportation services for individuals with physical disabilities,
@@ -225,13 +226,13 @@ function Services(props) {
         </div>
         <div className="grid-item">
           <p>
-            <h4>
+            <h3>
               {props.lang === "En"
                 ? "4. Flight"
                 : props.lang === "De"
                 ? "4. Flug"
                 : "4. विमान"}
-            </h4>
+            </h3>
             {props.lang === "En"
               ? `TravelGOat, our website, is dedicated to offering accessible
             transportation services for individuals with physical disabilities,
@@ -266,23 +267,23 @@ function Services(props) {
         </div>
       </div>
       <br />
-      <h4>
+      <h1>
         {props.lang === "En"
           ? "Facilities"
           : props.lang === "De"
           ? "Einrichtungen"
           : "सुविधाएँ"}
-      </h4>
+      </h1>
       <div className="container">
         <div className="grid-item">
           <p>
-            <h4>
+            <h3>
               {props.lang === "En"
                 ? "1. Accessible Washrooms"
                 : props.lang === "De"
                 ? "Zugängliche Waschräume"
                 : "सुलभ शौचालय"}
-            </h4>
+            </h3>
             {props.lang === "En"
               ? `
             TravelGOat, our website, recognizes the importance of accessible
@@ -315,13 +316,13 @@ function Services(props) {
         </div>
         <div className="grid-item">
           <p>
-            <h4>
+            <h3>
               {props.lang === "En"
                 ? "2. Care Takers"
                 : props.lang === "De"
                 ? "2. Betreuungsperson"
                 : "2. देखभाल करने वाले"}
-            </h4>
+            </h3>
             {props.lang === "En"
               ? ` TravelGOat, our website, offers care taker services that are
             tailored specifically to meet the needs of individuals with
