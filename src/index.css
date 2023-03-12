@@ -13,6 +13,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /* width: 100vw;
   height: 100vh; */
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #222;
+  /* outline: 1px solid #E45E35; */
 }
 
 code {
