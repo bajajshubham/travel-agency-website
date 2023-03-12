@@ -17,7 +17,7 @@ function App() {
           <AllRoutes lang={lang}/>
           <Customize />
         </Body>
-        <Footer />
+        <Footer lang={lang} setLang={setLanguage}/>
       </div>
     </>
   );
