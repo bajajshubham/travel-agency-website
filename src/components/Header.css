@@ -4,8 +4,6 @@
   color: #ffffff;
 }
 
-
-
 .header-top-part {
   height: 100px;
   padding: 20px 50px;
@@ -16,7 +14,6 @@
 
 .web>h1 {
   margin: 0;
-  color: #8BC460;
 }
 
 .header-bottom-part {
@@ -30,22 +27,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: 500;
-  
-}
-
-element.style {
-  color: white;
-}
-
-
-.active{
-  text-decoration: underline;
-  text-decoration-color: #E45E35;
-  text-decoration-thickness: 3px;
-  text-decoration-skip-ink: none;
 }
 
 .activity, .web {
@@ -55,8 +36,4 @@ element.style {
 
 .activity>span {
   margin-left: 12px;
-}
-
-.language-dropdown {
-  margin-right: 20px;
 }
