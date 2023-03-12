@@ -5,12 +5,13 @@ import Home from '../components/Home/Home'
 import Services from "../components/Services/Services";
 import Trips from "../components/Trips/Trips";
 
-const AllRoutes = () => {
+const AllRoutes = (props) => {
+
   return (
     <Routes>
       <Route path="/" element={<Home />}/>
       <Route path="/trips" element={<Trips />}/>
-      <Route path="/services" element={<Services />}/>
+      <Route path="/services" element={<Services  lang={props.lang} />}/>
       <Route path="/help" element={<Help />}/>
     </Routes>
   );

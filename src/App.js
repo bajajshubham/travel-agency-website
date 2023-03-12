@@ -1,4 +1,5 @@
 import "./App.css";
+import React from "react";
 import Header from "./components/Header/Header";
 import Body from "./containers/Body";
 import Filters from "./utils/Filters/Filters";
@@ -7,12 +8,13 @@ import AllRoutes from "./utils/AllRoutes";
 
 import Customize from "./components/Customize";
 function App() {
+  const [lang, setLanguage] = React.useState("En");
   return (
     <>
       <div className="App">
-        <Header />
+        <Header lang={lang} setLang={setLanguage}/>
         <Body>
-          <AllRoutes />
+          <AllRoutes lang={lang}/>
           <Customize />
         </Body>
         <Footer />

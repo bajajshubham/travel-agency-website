@@ -1,7 +1,7 @@
 // import React from "react";
 // import {
 //   AccessibilityNew as AccessibilityNewIcon,
-//   Language as LanguageIcon,
+//   props.Language as props.LanguageIcon,
 // } from "@mui/icons-material";
 // import "./Header.css";
 // import { NavLink } from "react-router-dom";
@@ -9,7 +9,7 @@
 
 
 // const Header = () => {
-//   const [lang, setLanguage] = React.useState("En");
+//   const [props.lang, setprops.Language] = React.useState("En");
 
 
 //   return (
@@ -25,19 +25,19 @@
 //             <AccessibilityNewIcon />
 //           </span>
 //           <span>
-//             <LanguageIcon />
+//             <props.LanguageIcon />
 //           </span>
  
 //           <Select
-//             value={lang}
-//             onChange={(e) => setLanguage(e.target.value)}
-//             className="language-dropdown"
+//             value={props.lang}
+//             onChange={(e) => setprops.Language(e.target.value)}
+//             className="props.language-dropdown"
 // >
 //             <MenuItem value="En">English </MenuItem>
 //             <MenuItem value="De">Deutsch</MenuItem>
 //             <MenuItem value="Hi">Hindi</MenuItem>
 //           </Select>
-//           {/* <span>{lang}</span> */}
+//           {/* <span>{props.lang}</span> */}
 //           <span>Login</span>
 //           <span>Sign up</span>
 //         </div>
@@ -68,7 +68,7 @@
 // import React from "react";
 // import {
 //   AccessibilityNew as AccessibilityNewIcon,
-//   Language as LanguageIcon,
+//   props.Language as props.LanguageIcon,
 // } from "@mui/icons-material";
 // import "./Header.css";
 // import { NavLink } from "react-router-dom";
@@ -76,7 +76,7 @@
 
 
 // const Header = () => {
-//   const [lang, setLanguage] = React.useState("En");
+//   const [props.lang, setprops.Language] = React.useState("En");
 
 
 //   return (
@@ -92,40 +92,40 @@
 //             <AccessibilityNewIcon />
 //           </span>
 //           <span>
-//             <LanguageIcon />
+//             <props.LanguageIcon />
 //           </span>
  
 //           <Select
-//             value={lang}
-//             onChange={(e) => setLanguage(e.target.value)}
-//             className="language-dropdown"
+//             value={props.lang}
+//             onChange={(e) => setprops.Language(e.target.value)}
+//             className="props.language-dropdown"
 //           >
 //             <MenuItem value="En">English</MenuItem>
 //             <MenuItem value="De">Deutsch</MenuItem>
 //             <MenuItem value="Hi">हिन्दी</MenuItem>
 //           </Select>
-//           {/* <span>{lang}</span>     //shows the language code */} 
+//           {/* <span>{props.lang}</span>     //shows the props.language code */} 
 //           <span>Login</span>
 //           <span>Sign up</span>
 //         </div>
 //       </div>
 //       <div className="header-bottom-part">
 //         <NavLink className="nav-items" to="/">
-//           {lang === "Hi" ? "होम" : "Home"}
-//           {lang === "De" ? "Home": "Home"}
+//           {props.lang === "Hi" ? "होम" : "Home"}
+//           {props.lang === "De" ? "Home": "Home"}
 //         </NavLink>
 //         <NavLink className="nav-items" to="/trips">
-//           {lang === "Hi" ? "यात्राएँ" : "Trips"}
-//           {lang === "De" ? "Reisen": "Trips"}
+//           {props.lang === "Hi" ? "यात्राएँ" : "Trips"}
+//           {props.lang === "De" ? "Reisen": "Trips"}
 //         </NavLink>
 //         <NavLink className="nav-items" to="/services">
-//           {lang === "Hi" ? "सेवाएं" : "Services"}
-//           {lang === "De" ? "Reisen": "Trips"}
+//           {props.lang === "Hi" ? "सेवाएं" : "Services"}
+//           {props.lang === "De" ? "Reisen": "Trips"}
 
 //         </NavLink>
 //         <NavLink className="nav-items" to="/help">
-//           {lang === "Hi" ? "सहायता" : "Help"}
-//           {lang === "De" ? "Reisen": "Trips"}
+//           {props.lang === "Hi" ? "सहायता" : "Help"}
+//           {props.lang === "De" ? "Reisen": "Trips"}
 
 //         </NavLink>
 //       </div>
@@ -148,8 +148,8 @@ import "./Header.css";
 import { NavLink } from "react-router-dom";
 import { Select, MenuItem } from "@mui/material";
 
-const Header = () => {
-  const [lang, setLanguage] = React.useState("En");
+const Header = (props) => {
+  
 
   return (
     <div className="header">
@@ -167,9 +167,9 @@ const Header = () => {
             <LanguageIcon />
           </span>
           <Select
-            value={lang}
-            onChange={(e) => setLanguage(e.target.value)}
-            className="language-dropdown"
+            value={props.lang}
+            onChange={(e) => props.setLang(e.target.value)}
+            className="props.language-dropdown"
           >
             <MenuItem value="En">English</MenuItem>
             <MenuItem value="De">German</MenuItem>
@@ -181,16 +181,16 @@ const Header = () => {
       </div>
       <div className="header-bottom-part">
         <NavLink className="nav-items" to="/">
-          {lang === "En" ? "Home" : lang === "De" ? "Startseite" : "घर"}
+          {props.lang === "En" ? "Home" : props.lang === "De" ? "Startseite" : "घर"}
         </NavLink>
         <NavLink className="nav-items" to="/trips">
-          {lang === "En" ? "Trips" : lang === "De" ? "Reisen" : "यात्राएं"}
+          {props.lang === "En" ? "Trips" : props.lang === "De" ? "Reisen" : "यात्राएं"}
         </NavLink>
         <NavLink className="nav-items" to="/services">
-          {lang === "En" ? "Services" : lang === "De" ? "Dienstleistungen" : "सेवाएं"}
+          {props.lang === "En" ? "Services" : props.lang === "De" ? "Dienstleistungen" : "सेवाएं"}
         </NavLink>
         <NavLink className="nav-items" to="/help">
-          {lang === "En" ? "Help" : lang === "De" ? "Hilfe" : "मदद"}
+          {props.lang === "En" ? "Help" : props.lang === "De" ? "Hilfe" : "मदद"}
         </NavLink>
       </div>
     </div>

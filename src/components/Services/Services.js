@@ -9,29 +9,45 @@ import flight from "../../Images/flight.jpg";
 import washrooms from "../../Images/washrooms.jpg";
 import caretakers from "../../Images/caretakers.jpg";
 
-function Services() {
+function Services(props) {
   return (
     <div>
-      <br/>
       <h1>Services</h1>
       <div className="container">
         <div className="grid-item">
           <p>
-            <h4>1.Wheel chair</h4> <br />
-            TravelGoat offers wheelchair services tailored specifically for
+            <h4>1.Wheel chair</h4>
+            {props.lang === "En" ? `TravelGoat offers wheelchair services tailored specifically for
             individuals with physical disabilities, providing a comfortable and
             accessible means of transportation. In addition to providing
             wheelchair rentals, we also offer information and resources to help
             our customers choose the appropriate type of wheelchair based on
             their specific needs and preferences. Our goal is to ensure that all
             individuals have the opportunity to travel and explore the world,
-            regardless of their physical limitations.
+            regardless of their physical limitations.` : props.lang === "De" ? `
+             bietet speziell zugeschnittene Rollstuhldienste an
+             Personen mit körperlichen Behinderungen, die eine komfortable und
+             zugängliche Verkehrsmittel. Neben der Bereitstellung
+             Rollstuhlverleih bieten wir auch Informationen und Ressourcen an, um zu helfen
+             unsere kunden wählen den passenden rollstuhltyp aus
+             ihre spezifischen Bedürfnisse und Vorlieben. Unser Ziel ist es, dafür zu sorgen, dass alle
+             Einzelpersonen haben die Möglichkeit zu reisen und die Welt zu entdecken,
+             unabhängig von ihren körperlichen Einschränkungen.` : `
+             विशेष रूप से तैयार की गई व्हीलचेयर सेवाएं प्रदान करता है
+             शारीरिक अक्षमताओं वाले व्यक्ति, एक आरामदायक और प्रदान करते हैं
+             परिवहन के सुलभ साधन। प्रदान करने के अलावा
+             व्हीलचेयर किराए पर, हम मदद के लिए जानकारी और संसाधन भी प्रदान करते हैं
+             हमारे ग्राहक उपयुक्त प्रकार के व्हीलचेयर के आधार पर चुनते हैं
+             उनकी विशिष्ट आवश्यकताएं और प्राथमिकताएं। हमारा लक्ष्य यह सुनिश्चित करना है कि सभी
+             व्यक्तियों को यात्रा करने और दुनिया का पता लगाने का अवसर मिलता है,
+             उनकी शारीरिक सीमाओं की परवाह किए बिना।`}
+            
           </p>
           <img className="images-services" src={wheelchair} alt="product" />
         </div>
         <div className="grid-item">
           <p>
-            <h4>2.Walker</h4> <br />
+            <h4>2.Walker</h4>
             TravelGOat offers walker services tailored specifically for
             individuals with physical disabilities. We provide a range of walker
             options that are designed for increased stability and support, while
@@ -49,9 +65,9 @@ function Services() {
         <div className="grid-item">
           <p>
             <h3>Transportation Mode</h3>
-            <br />
+          
             <h4>1.Car</h4>
-            <br />
+          
             TravelGOat, our website, provides transportation services that are
             accessible and inclusive to individuals with physical disabilities.
             Our buses are equipped with features such as wheelchair ramps and
@@ -66,10 +82,8 @@ function Services() {
 
         <div className="grid-item">
           <p>
-            {" "}
-            <br />
             <h4>2.Bus</h4>
-            <br />
+          
             TravelGOat, our website, is committed to providing accessible
             transportation services for individuals with physical disabilities.
             Our car rental services cater specifically to these individuals,
@@ -88,9 +102,9 @@ function Services() {
         <div className="grid-item">
           <p>
             {" "}
-            <br />
+          
             <h4>3.Train</h4>
-            <br />
+          
             At TravelGOat, our website offers inclusive and accessible
             transportation services for individuals with physical disabilities,
             including train services. Our trains are equipped with features such
@@ -107,9 +121,9 @@ function Services() {
         <div className="grid-item">
           <p>
             {" "}
-            <br />
+          
             <h4>4.Flight</h4>
-            <br />
+          
             TravelGOat, our website, is dedicated to offering accessible
             transportation services for individuals with physical disabilities,
             including flight services. We provide a range of features such as
@@ -129,7 +143,7 @@ function Services() {
         <div className="grid-item">
           <p>
             <h4>1.Accessible Washrooms</h4>
-            <br />
+          
             TravelGOat, our website, recognizes the importance of accessible
             washrooms for individuals with disabilities. We provide information
             and resources on our website to help customers locate washrooms that
@@ -144,7 +158,7 @@ function Services() {
         <div className="grid-item">
           <p>
             <h4>2.Care Takers</h4>
-            <br />
+          
             TravelGOat, our website, offers care taker services that are
             tailored specifically to meet the needs of individuals with
             disabilities. Our team includes skilled nurses and doctors who

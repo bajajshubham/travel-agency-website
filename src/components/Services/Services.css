@@ -2,7 +2,7 @@
     background-color:#222222;
     padding:40px;
     gap: 40px;
-    border-radius:10px;
+  
     color:#fff;
     display:flex;
     align-items:center;
@@ -54,11 +54,7 @@ text-align: left;
   border-bottom: 1px solid #e2e2e2;
   margin-bottom: 40px;
 } */
-*{
-  margin: 4px;;
 
-  box-sizing:border-box;
-}
 /* } 
 html{
   background-color:#eee;
