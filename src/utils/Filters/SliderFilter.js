@@ -6,9 +6,8 @@ function valuetext(value) {
 }
 
 const SliderFilter = (props) => {
-
   const minDistance = 10;
-  const [value1, setValue1] = React.useState([20, 37]);
+  const [value1, setValue1] = React.useState([100, 1000]);
 
   const handleChange1 = (event, newValue, activeThumb) => {
     if (!Array.isArray(newValue)) {
@@ -23,6 +22,11 @@ const SliderFilter = (props) => {
 
   return (
     <Slider
+      sx={{
+        marginLeft: "5px",
+        marginRight: "5px",
+        width: "-webkit-fill-available",
+      }}
       getAriaLabel={() => "Minimum distance"}
       value={value1}
       min={100}
