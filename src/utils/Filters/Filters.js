@@ -1,12 +1,26 @@
 import React from "react";
-import './Filters.css'
+import CategoryFilter from "./CategoryFilter";
 import SliderFilter from "./SliderFilter";
+import "./Filters.css";
+import DestinationFilter from "./DestinationFilter/DestinationFilter";
 
 const Filters = () => {
   return (
     <div className="wrapper">
       <div className="filter-set">
-        <SliderFilter />
+        Apply filters
+        <div>
+          Budget
+          <SliderFilter />
+        </div>
+        <div>
+          Category
+          <CategoryFilter />
+        </div>
+        <div>
+          Destination
+          <DestinationFilter />
+        </div>
       </div>
     </div>
   );
