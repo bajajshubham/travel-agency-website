@@ -1,5 +1,6 @@
 import Axios from "axios";
 import React, { Component } from "react";
+import Form1 from "../Form/Form1";
 
 export default class Trips extends Component {
   constructor(props) {
@@ -23,6 +24,7 @@ export default class Trips extends Component {
     return (
       <div>Trips
         {/* {this.state.isLoggedIn && <p>{this.state.session}</p>} */}
+        
       </div>
     );
   }

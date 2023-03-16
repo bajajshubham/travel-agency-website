@@ -6,6 +6,8 @@ import Filters from "./utils/Filters/Filters";
 import Footer from "./components/Footer/Footer";
 import AllRoutes from "./utils/AllRoutes";
 
+
+
 import Customize from "./components/Customize";
 function App() {
   const [lang, setLanguage] = React.useState("En");
@@ -16,6 +18,9 @@ function App() {
         <Body>
           <AllRoutes lang={lang}/>
           <Customize />
+        
+
+          <Filters/>
         </Body>
         <Footer lang={lang} setLang={setLanguage}/>
       </div>
