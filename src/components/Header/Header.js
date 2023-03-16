@@ -35,9 +35,9 @@ const Header = (props) => {
             onChange={(e) => props.setLang(e.target.value)}
             className="props language-dropdown"
           >
-            <MenuItem value="En">English</MenuItem>
-            <MenuItem value="De">German</MenuItem>
-            <MenuItem value="Es">Hindi</MenuItem>
+            <MenuItem value="En">En</MenuItem>
+            <MenuItem value="De">De</MenuItem>
+            <MenuItem value="Es">हिंदी</MenuItem>
           </Select>
           <span>Login</span>
           <span>Sign up</span>

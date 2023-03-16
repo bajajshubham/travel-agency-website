@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <Header lang={lang} setLang={setLanguage}/>
-      <Body>
+      <Body lang={lang}> 
         <AllRoutes lang={lang} />
       </Body >
       <Footer lang={lang}/>
