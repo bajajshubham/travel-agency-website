@@ -114,7 +114,7 @@ export default class Filters extends Component {
             />
           </div>
         </div>
-        <div>
+        <div className="filter-results">
           <TripCards
             city="Heidelberg"
             price="EUR 30"

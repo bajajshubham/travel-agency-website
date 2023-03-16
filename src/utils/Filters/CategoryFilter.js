@@ -24,6 +24,7 @@ const CategoryFilter = (props) => {
       religiousChecked,
     });
   }, [natureChecked, adventureChecked, historicalChecked, religiousChecked]);
+  
   return (
     <div>
       <FormGroup>
