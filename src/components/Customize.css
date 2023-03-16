@@ -4,6 +4,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
+white-space: 10px;
 }
 
 .elements {
@@ -20,15 +21,31 @@ flex-direction: column;
     align-items: baseline;
     font-weight: bold;
     border-top: 2px solid #000;
+   
   
 }
 .element{
     margin-right: 15px;
+  
 }
 img{
-    width: 1440px;
+    width: 1350px;
+    
 }
 .inp{
     box-sizing: border-box;
     width: 90px;
+}   
+.box{
+    display: flexbox;
+    
+}
+
+.card-container{
+     display:flex;
+     justify-content: center; 
+     align-items: center;
+     color: blue;
+     gap: 20px;
+     border: #000;
 }
