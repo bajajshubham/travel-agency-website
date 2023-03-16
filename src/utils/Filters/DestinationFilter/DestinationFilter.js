@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import DestinationSearchFilter from "./DestinationSearchFilter";
 import { TextField, InputAdornment } from "@mui/material";
 
-// const countries = [{ label: "Andorra" }, { label: "United Arab Emirates" }];
-// const countries = [];
 export default class DestinationFilter extends Component {
   constructor(props) {
     super(props);
@@ -21,26 +19,27 @@ export default class DestinationFilter extends Component {
     this.onCityChange = this.onCityChange.bind(this);
     this.setRadius = this.setRadius.bind(this);
   }
+
   componentDidMount() {
     this.setState({
       locationDetails: this.props.locationDetails,
       countries: this.props.countries,
     });
   }
+
   componentWillReceiveProps(nextProps) {
     this.setState({
       locationDetails: nextProps.locationDetails,
       countries: nextProps.countries,
     });
   }
-
-  componentDidUpdate() {
-    this.props.sendCoordinates({
-      lat: this.state.lat,
-      long: this.state.long,
-      radius: this.state.radius,
-    });
-  }
+  // componentDidUpdate() {
+  //     this.props.sendCoordinates({
+  //       lat: this.state.lat,
+  //       long: this.state.long,
+  //       radius: this.state.radius,
+  //     });
+  // }
 
   onCountryChange(country) {
     this.setState({ cities: [] });
@@ -52,7 +51,6 @@ export default class DestinationFilter extends Component {
         return item.city;
       });
       const uniqueCities = [...new Set(cities)];
-      debugger;
       this.setState({
         cities: uniqueCities.map((city) => {
           return { label: city };
@@ -60,6 +58,7 @@ export default class DestinationFilter extends Component {
       });
     }
   }
+
   onCityChange(city) {
     if (city) {
       const arr = this.state.locationDetails.filter((item) => {
@@ -71,7 +70,14 @@ export default class DestinationFilter extends Component {
   }
 
   setRadius(radius) {
-    this.setState({ inputRadius: radius });
+    this.setState({ inputRadius: radius }, () => {
+      // debugger;
+      this.props.sendCoordinates({
+        lat: this.state.lat,
+        long: this.state.long,
+        radius: this.state.inputRadius,
+      });
+    });
   }
 
   render() {

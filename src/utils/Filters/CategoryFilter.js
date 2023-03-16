@@ -1,10 +1,30 @@
 import { Checkbox, FormGroup, FormControlLabel } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-const CategoryFilter = () => {
+const CategoryFilter = (props) => {
+  const [natureChecked, setNature] = useState(true);
+  const [adventureChecked, setAdventure] = useState(true);
+  const [historicalChecked, setHistorical] = useState(true);
+  const [religiousChecked, setReligious] = useState(true);
+
   const handleChange = (e, v) => {
-    console.log(e.target.id +" "+ v);
+    const id = e.target.id;
+
+    if (id === "1") setNature(v);
+    if (id === "2") setAdventure(v);
+    if (id === "3") setHistorical(v);
+    if (id === "4") setReligious(v);
   };
+
+  useEffect(() => {
+    props.sendCategories({
+      natureChecked,
+      adventureChecked,
+      historicalChecked,
+      religiousChecked,
+    });
+  }, [natureChecked, adventureChecked, historicalChecked, religiousChecked]);
+  
   return (
     <div>
       <FormGroup>
