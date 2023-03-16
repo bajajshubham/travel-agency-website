@@ -1,0 +1,15 @@
+.nav-link {
+  color: #222;
+  text-decoration: none;
+}
+
+.nav-link.active {
+  color: rgb(228, 94, 53)
+}
+
+.navbar--child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
