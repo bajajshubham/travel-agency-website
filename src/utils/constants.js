@@ -5,6 +5,9 @@ export const categories = [
   { id: 4, category: "Religious" },
 ];
 
+export const localhost = "http://localhost:5000";
+export const locationMockData = `${localhost}/locationMockData`;
+
 
 export const wheelChairEnglish = `TravelGoat offers wheelchair services tailored specifically for
 individuals with physical disabilities, providing a comfortable and

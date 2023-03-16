@@ -5,6 +5,9 @@ const DestinationSearchFilter = (props) => {
   return (
     <div>
       <Autocomplete
+        onChange={(event, newValue) => {
+          props.onValueChange(newValue);
+        }}
         id={props.id}
         options={props.data}
         autoHighlight
