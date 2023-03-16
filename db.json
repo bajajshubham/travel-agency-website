@@ -1,19 +1,13 @@
 {
-  "posts": [
+  "upcomingTrips": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "location": "Stuttgart",
+      "price": 100,
+      "category": "Historical",
+      "tripType": "city",
+      "images": [],
+      "itinerary": []
     }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
