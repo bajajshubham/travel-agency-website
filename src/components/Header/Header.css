@@ -42,7 +42,7 @@ element.style {
 }
 
 
-.active{
+.nav-items.active 
   text-decoration: underline;
   text-decoration-color: #E45E35;
   text-decoration-thickness: 3px;
@@ -59,7 +59,40 @@ element.style {
 }
 
 
+.menu-items {
+  color: rgb(21, 1, 23);
+}
+
+.menu {
+  background-color: #222;
+  width: 325px;
+  height: 65vh;
+  overflow-y: scroll;
+  display: flex;
+  text-align: left;
+  /* align-items: flex-start; */
+  position: fixed;
+  top: 13%;
+  right: -80%;
+  transition: 800ms;
+}
+
+.menu.access-active {
+  position: fixed;
+  right: 0;
+  transition: 350ms;
+}
+
+.sidebar {
+  color: #000;
+}
+
+.accessibility-icon{
+  color: #ffffff;
+}
+
 .language-dropdown { 
   margin-right: 20px;
    color: white !important;
   }
+

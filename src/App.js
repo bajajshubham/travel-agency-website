@@ -5,11 +5,9 @@ import Body from "./containers/Body";
 import Footer from "./components/Footer/Footer";
 import AllRoutes from "./utils/AllRoutes";
 
-
-
-import Customize from "./components/Customize";
 function App() {
   const [lang, setLanguage] = React.useState("En");
+
   return (
     <div className="App">
       <Header lang={lang} setLang={setLanguage}/>

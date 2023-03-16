@@ -1,20 +1,58 @@
-
-
-
-
-
-import React from "react";
+import React, { useState } from "react";
 import {
   AccessibilityNew as AccessibilityNewIcon,
   Language as LanguageIcon,
 } from "@mui/icons-material";
 import "./Header.css";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import * as AiIcons from 'react-icons/ai';
+import Accessibility from "../Accessibility/Accessibility";
 import { Select, MenuItem } from "@mui/material";
 
-const Header = (props) => {
-  
 
+const Header = (props) => {
+  const [sidebar, setSidebar] = useState(false);
+  const showSidebar = () => setSidebar(!sidebar);
+  const [brightness_val, setBrightness] = useState(1);
+  const [contrast_val, setContrast] = useState(1);
+  const [saturate_val, setSaturate] = useState(1);
+  const [monochrome_val, setMonochrome] = useState(0);
+  const [DSwitch, setDSwitch] = useState(false);
+  const [PSwitch, setPSwitch] = useState(false);
+  const [TSwitch, setTSwitch] = useState(false);
+
+  const getBrightness_val = (bright) => {
+    setBrightness(bright);
+    console.log(bright + "App");
+  }
+
+  const getContrast_val = (contrast) => {
+    setContrast(contrast);
+    console.log(contrast + "App");
+  }
+
+  const getSaturate_val = (saturate) => {
+    setSaturate(saturate);
+    // console.log(contrast + "App");
+  }
+
+  const getMonochrome_val = (gray) => {
+    setMonochrome(gray);
+    // console.log(contrast + "App");
+  }
+
+  const getDSwitchState = (Dval) => {
+    setDSwitch(Dval);
+    // console.log(Dval + "Dapp");
+  }
+
+  const getPSwitchState = (Pval) => {
+    setPSwitch(Pval);
+    // console.log(Pval + "Papp");
+  }
+  const getTSwitchState = (Tval) => {
+    setTSwitch(Tval);
+  }
   return (
     <div className="header">
       <div className="header-top-part">
@@ -24,9 +62,20 @@ const Header = (props) => {
           </h1>
         </div>
         <div className="activity">
-          <span>
-            <AccessibilityNewIcon />
-          </span>
+          <NavLink className="accessibility-icon">
+            <AccessibilityNewIcon onClick={showSidebar}/>
+            </NavLink>
+            <nav className={sidebar ? 'menu access-active' : 'menu'}>
+             <div className='menu-items'>
+            <Link>
+            <AiIcons.AiOutlineClose onClick={showSidebar} color={'white'} />
+            </Link>
+            <Accessibility sendBrightness={getBrightness_val} sendContrast={getContrast_val} sendSaturate={getSaturate_val} sendMonochrome={getMonochrome_val}
+            sendDSwitch={getDSwitchState} sendPSwitch={getPSwitchState} sendTSwitch={getTSwitchState}
+            brightness_val={brightness_val} contrast_val={contrast_val} saturate_val={saturate_val} monochrome_val={monochrome_val}
+            DSwitch={DSwitch} PSwitch={PSwitch} TSwitch={TSwitch}/>
+        </div>
+      </nav>
           <span>
             <LanguageIcon />
           </span>
@@ -56,6 +105,7 @@ const Header = (props) => {
         <NavLink className="nav-items" to="/help">
           {props.lang === "En" ? "Help" : props.lang === "De" ? "Hilfe" : "मदद"}
         </NavLink>
+      
       </div>
     </div>
   );
