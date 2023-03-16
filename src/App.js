@@ -17,9 +17,9 @@ function App() {
         <Header lang={lang} setLang={setLanguage}/>
         <Body>
           <AllRoutes lang={lang}/>
-          <Customize />
+          <Customize  lang={lang}/>
         
-
+      
           <Filters/>
         </Body>
         <Footer lang={lang} setLang={setLanguage}/>
