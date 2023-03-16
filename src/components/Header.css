@@ -1,0 +1,39 @@
+.header {
+  height: 150px;
+  background-color: #222222;
+  color: #ffffff;
+}
+
+.header-top-part {
+  height: 100px;
+  padding: 20px 50px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.web>h1 {
+  margin: 0;
+}
+
+.header-bottom-part {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+}
+
+.nav-items {
+  margin: 10px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.activity, .web {
+  display: flex;
+  align-items: center;
+}
+
+.activity>span {
+  margin-left: 12px;
+}
