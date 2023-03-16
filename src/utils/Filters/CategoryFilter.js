@@ -29,20 +29,23 @@ const CategoryFilter = (props) => {
     <div>
       <FormGroup>
         <FormControlLabel
-          control={<Checkbox id="1" defaultChecked onChange={handleChange} />}
-          label="Nature"
+          control={<Checkbox id="1"  defaultChecked onChange={handleChange} />}
+          label= {props.lang === "En" ? "Nature" : props.lang === "De" ? "Natur" : "प्रकृति"}
         />
         <FormControlLabel
           control={<Checkbox id="2" defaultChecked onChange={handleChange} />}
-          label="Adventure"
+          label= {props.lang === "En" ? "Adventure" : props.lang === "De" ? "Abenteuer" : "साहसिक काम"}
+
         />
         <FormControlLabel
           control={<Checkbox id="3" defaultChecked onChange={handleChange} />}
-          label="Historical"
+          label= {props.lang === "En" ? "Historical" : props.lang === "De" ? "Historisch" : "ऐतिहासिक"}
+
         />
         <FormControlLabel
           control={<Checkbox id="4" defaultChecked onChange={handleChange} />}
-          label="Religious"
+          label= {props.lang === "En" ? "Religious" : props.lang === "De" ? "Religiös" : "धार्मिक"}
+
         />
       </FormGroup>
     </div>

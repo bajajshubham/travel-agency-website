@@ -12,11 +12,11 @@ function App() {
   const [lang, setLanguage] = React.useState("En");
   return (
     <div className="App">
-      <Header />
+      <Header lang={lang} setLang={setLanguage}/>
       <Body>
-        <AllRoutes />
-      </Body>
-      <Footer />
+        <AllRoutes lang={lang} />
+      </Body >
+      <Footer lang={lang}/>
     </div>
   );
 }
