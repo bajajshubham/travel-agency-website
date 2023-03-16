@@ -10,8 +10,8 @@ export default class Filters extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      locationMock: [],
-      locationDetails: [],
+      locationMock: [], // all data
+      locationDetails: [], //location data
       countries: [],
       filterParams: {
         minBudget: 100,
@@ -29,6 +29,7 @@ export default class Filters extends Component {
     };
     this.getBudgetValues = this.getBudgetValues.bind(this);
     this.getCategories = this.getCategories.bind(this);
+    this.getCoordinates = this.getCoordinates.bind(this);
   }
 
   async componentDidMount() {
@@ -58,8 +59,8 @@ export default class Filters extends Component {
     });
 
     this.setState({
-      locationMock: locationMockData,
-      locationDetails: locationDetails,
+      locationMock: locationMockData, //all data
+      locationDetails: locationDetails, //location data
       countries: countries,
     });
   }
@@ -80,6 +81,17 @@ export default class Filters extends Component {
     }));
   }
 
+  getCoordinates(values) {
+    this.setState((prevState) => ({
+      filterParams: {
+        ...prevState.filterParams,
+        lat: values.lat,
+        long: values.long,
+        radius: values.radius,
+      },
+    }));
+  }
+
   render() {
     return (
       <div className="filter-wrapper">
@@ -96,6 +108,7 @@ export default class Filters extends Component {
           <div>
             Destination
             <DestinationFilter
+              sendCoordinates={this.getCoordinates}
               locationDetails={this.state.locationDetails}
               countries={this.state.countries}
             />

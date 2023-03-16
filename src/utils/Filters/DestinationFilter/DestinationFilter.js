@@ -8,10 +8,12 @@ export default class DestinationFilter extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      locationDetails: [],
+      locationDetails: [], //location details
       countries: [],
       cities: [],
       selectedCity: "",
+      lat: 0,
+      long: 0,
       inputRadius: null,
     };
 
@@ -29,6 +31,14 @@ export default class DestinationFilter extends Component {
     this.setState({
       locationDetails: nextProps.locationDetails,
       countries: nextProps.countries,
+    });
+  }
+
+  componentDidUpdate() {
+    this.props.sendCoordinates({
+      lat: this.state.lat,
+      long: this.state.long,
+      radius: this.state.radius,
     });
   }
 
@@ -51,7 +61,11 @@ export default class DestinationFilter extends Component {
   }
   onCityChange(city) {
     if (city) {
-      this.setState({ selectedCity: city.label });
+      const arr = this.state.locationDetails.filter((item) => {
+        return item.city === city.label;
+      });
+      const { lat, long } = arr[0];
+      this.setState({ selectedCity: city.label, lat, long });
     }
   }
 
