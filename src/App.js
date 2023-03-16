@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import Header from "./components/Header/Header";
+import Body from "./containers/Body";
+import Footer from "./components/Footer/Footer";
+import AllRoutes from "./utils/AllRoutes";
 
 function App() {
+  const [lang, setLanguage] = React.useState("En");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header lang={lang} setLang={setLanguage}/>
+      <Body lang={lang}> 
+        <AllRoutes lang={lang} />
+      </Body >
+      <Footer lang={lang}/>
     </div>
   );
 }
