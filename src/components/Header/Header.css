@@ -1,8 +1,10 @@
 .header {
   height: fit-content;
   background-color: #222222;
-  color: #ffffff;
+  color: #ffffff; 
 }
+
+
 
 .header-top-part {
   height: fit-content;
@@ -32,9 +34,15 @@
   text-decoration: none;
   color: #ffffff;
   font-weight: 500;
+  
 }
 
-.nav-items.active {
+element.style {
+  color: white;
+}
+
+
+.nav-items.active 
   text-decoration: underline;
   text-decoration-color: #E45E35;
   text-decoration-thickness: 3px;
@@ -49,6 +57,7 @@
 .activity>span {
   margin-left: 12px;
 }
+
 
 .menu-items {
   color: rgb(21, 1, 23);
@@ -81,3 +90,9 @@
 .accessibility-icon{
   color: #ffffff;
 }
+
+.language-dropdown { 
+  margin-right: 20px;
+   color: white !important;
+  }
+

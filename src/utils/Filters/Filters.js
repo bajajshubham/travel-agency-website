@@ -96,18 +96,19 @@ export default class Filters extends Component {
     return (
       <div className="filter-wrapper">
         <div className="filter-set">
-          Apply filters
+          Apply filters 
           <div>
             Budget
-            <SliderFilter sendValues={this.getBudgetValues} />
+            <SliderFilter lang={this.props.lang} sendValues={this.getBudgetValues} />
           </div>
           <div>
             Category
-            <CategoryFilter sendCategories={this.getCategories} />
+            <CategoryFilter lang={this.props.lang} sendCategories={this.getCategories} />
           </div>
           <div>
             Destination
             <DestinationFilter
+            lang={this.props.lang}
               sendCoordinates={this.getCoordinates}
               locationDetails={this.state.locationDetails}
               countries={this.state.countries}

@@ -6,18 +6,19 @@ import Services from "../components/Services/Services";
 import Trips from "../components/Trips/Trips";
 import Filters from "./Filters/Filters";
 
-const AllRoutes = () => {
+const AllRoutes = (props) => {
+
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/trips" element={<Trips />}>
-        <Route path="upcoming" element={<Filters />} />
-        <Route path="students" element={<Filters />} />
-        <Route path="accessible" element={<Filters />} />
-        <Route path="plan" element={<Filters />} />
-        <Route path="findplace" element={<Filters />} />
+      <Route path="/" element={<Home lang={props.lang}/>} />
+      <Route path="/trips" element={<Trips lang={props.lang}/>}>
+        <Route path="upcoming" element={<Filters lang={props.lang} />} />
+        <Route path="students" element={<Filters lang={props.lang} />} />
+        <Route path="accessible" element={<Filters lang={props.lang}/>} />
+        <Route path="plan" element={<Filters lang={props.lang} />} />
+        <Route path="findplace" element={<Filters  lang={props.lang}/>} />
       </Route>
-      <Route path="/services" element={<Services />} />
+      <Route path="/services" element={<Services  lang={props.lang} />} />
       <Route path="/help" element={<Help />} />
       <Route
         path="*"
@@ -28,3 +29,9 @@ const AllRoutes = () => {
 };
 
 export default AllRoutes;
+
+
+
+
+
+
