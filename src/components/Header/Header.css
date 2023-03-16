@@ -41,8 +41,7 @@
   text-decoration-skip-ink: none;
 }
 
-.activity,
-.web {
+.activity, .web {
   display: flex;
   align-items: center;
 }

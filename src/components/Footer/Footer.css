@@ -55,3 +55,6 @@ hr {
 .contact>p{
   color: rgb(228, 94, 53);
 }
+.footer>p{
+  text-align: center;
+}
