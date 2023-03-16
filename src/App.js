@@ -4,8 +4,15 @@ import Body from "./containers/Body";
 import Filters from "./utils/Filters/Filters";
 import Footer from "./components/Footer/Footer";
 import AllRoutes from "./utils/AllRoutes";
+import Home from "./components/Home/Home";
+
+
+
+
+
 
 function App() {
+
   return (
     <div className="App">
       <Header />
@@ -14,6 +21,7 @@ function App() {
         <Filters />
       </Body>
       <Footer />
+   
     </div>
   );
 }
