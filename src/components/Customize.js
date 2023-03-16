@@ -9,24 +9,37 @@ import { useState } from 'react';
 import Cards from './Cards/Cards';
 
 
-const Customize = () => {
+const Customize = (props) => {
     const [onNext, setNext] = useState(false);
     
     const onArrowClick = () => {
         setNext(true)
         console.log('Arrow is clicked by Pooja')
     }
+    
     return (
         <div className="Text">
-            <h1>Plan Your Own Trip</h1>
+            <h1>{props.lang === "En"
+          ? "Plan Your Own Trip"
+          : props.lang === "De"
+          ? "Planen Sie Ihre eigene Reise"
+          : "अपनी खुद की यात्रा की योजना बनाएं"}</h1>
             <div className="elements">
                 <Input className="element inp" placeholder='Destination' />
 
-                <div className="element box">Start</div>
+                <div className="element box">{props.lang === "En"
+          ? "Start"
+          : props.lang === "De"
+          ? "Start"
+          : "शुरू"}</div>
                 <LocalizationProvider dateAdapter={AdapterMoment}>
                     <DatePicker />
                 </LocalizationProvider>
-                <div className="element box">End</div>
+                <div className="element box">   {props.lang === "En"
+          ? "End"
+          : props.lang === "De"
+          ? "Ende"
+          : "अंत"}</div>
                 <LocalizationProvider dateAdapter={AdapterMoment}>
                     <DatePicker />
                 </LocalizationProvider>
