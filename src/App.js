@@ -9,7 +9,7 @@ function App() {
   const [lang, setLanguage] = React.useState("En");
 
   return (
-    <div className="App">
+    <div className="App" data-testid="App">
       <Header lang={lang} setLang={setLanguage}/>
       <Body lang={lang}> 
         <AllRoutes lang={lang} />

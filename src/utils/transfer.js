@@ -1,7 +1,7 @@
-import Axios from "axios";
+import axios from "axios";
 import { locationMockData } from "./constants";
 
 
 export const fetchMockData = () => {
-  return Axios.get(locationMockData);
+  return axios.get(locationMockData);
 };
