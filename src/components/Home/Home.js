@@ -6,70 +6,335 @@ import TripCards from "../Trips/TripCards";
 import "./Home.css";
 
 export default class Home extends Component {
+  // constructor(props) {
+  //   super(props)
+  //   this.state = {}
+  // }
   render() {
-    return (
-      <div className="home">
-        <div className="squeeze">
-          <div className="sqeeze-content">
-            <Typography sx={{ margin: "0" }} variant="h3" gutterBottom>
-              Bored?
-            </Typography>
-            <Typography variant="h3" gutterBottom>
-              Need a getaway?
-            </Typography>
-            <Typography sx={{ color: "#8BC460" }} variant="h2" gutterBottom>
-              We<span style={{ color: "#E45E35" }}>GO</span>at you!
-            </Typography>
+    // if (this.props.DSwitch) {
+    //   return (
+    //     <div className='Deuteranopia-theme' style={{ filter: `brightness(${this.props.brightness_val}) contrast(${this.props.contrast_val}) saturate(${this.props.saturate_val}) grayscale(${this.props.monochrome_val})` }}>
+    //       <div className="squeeze">
+    //         <div className="sqeeze-content">
+    //           <Typography sx={{ margin: "0" }} variant="h3" gutterBottom>
+    //             Bored?
+    //           </Typography>
+    //           <Typography variant="h3" gutterBottom>
+    //             Need a getaway?
+    //           </Typography>
+    //           <Typography sx={{ color: "#ae9d5b" }} variant="h2" gutterBottom>
+    //             We<span style={{ color: "#8C9C37" }}>GO</span>at you!
+    //           </Typography>
 
-            <Link className="link" to="/trips/upcoming">
-              <Typography sx={{ margin: "0" }} variant="h6" gutterBottom>
-                Upcoming Trips
+    //           <Link className="link" to="/trips/upcoming">
+    //             <Typography sx={{ margin: "0" }} variant="h6" gutterBottom>
+    //               Upcoming Trips
+    //             </Typography>
+    //             {/* <Button className="link-btn"></Button> */}
+    //           </Link>
+    //         </div>
+    //       </div>
+    //       <div className="popular-tours">
+    //         <Typography variant="h4" gutterBottom>
+    //           Popular Tours
+    //         </Typography>
+    //         <div className="card-holder">
+    //           <TripCards
+    //             city="Heidelberg"
+    //             price="EUR 30"
+    //             image="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
+    //           />
+    //           <TripCards
+    //             city="Heidelberg"
+    //             price="EUR 30"
+    //             image="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
+    //           />
+    //           <TripCards
+    //             city="Heidelberg"
+    //             price="EUR 30"
+    //             image="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
+    //           />
+    //         </div>
+    //       </div>
+    //       <div className="discounts">
+    //         <img src={students} alt="Students" />
+    //         <div className="discount-content">
+    //           <Typography sx={{ margin: "0" }} variant="h4" gutterBottom>
+    //             Discounts
+    //           </Typography>
+    //           <Typography variant="subtitle1" gutterBottom>
+    //             You can now avail discounts if you have a valid student ID card.
+    //             Visit the student trips page to view the trips on which you can
+    //             get this offers.
+    //           </Typography>
+    //           <Link className="link-discounts" to="/trips/student">
+    //             <Typography sx={{ margin: "0" }} variant="h6" gutterBottom>
+    //               Student Trips
+    //             </Typography>
+    //           </Link>
+    //         </div>
+    //       </div>
+    //     </div>
+    //   );
+    // } else if (this.props.PSwitch) {
+    //   return (
+    //     <div className='Protanopia-theme' style={{ filter: `brightness(${this.props.brightness_val}) contrast(${this.props.contrast_val}) saturate(${this.props.saturate_val}) grayscale(${this.props.monochrome_val})` }}>
+    //       <div className="squeeze">
+    //         <div className="sqeeze-content">
+    //           <Typography sx={{ margin: "0" }} variant="h3" gutterBottom>
+    //             Bored?
+    //           </Typography>
+    //           <Typography variant="h3" gutterBottom>
+    //             Need a getaway?
+    //           </Typography>
+    //           <Typography sx={{ color: "#8BC460" }} variant="h2" gutterBottom>
+    //             We<span style={{ color: "#566039" }}>GO</span>at you!
+    //           </Typography>
+
+    //           <Link className="link" to="/trips/upcoming">
+    //             <Typography sx={{ margin: "0" }} variant="h6" gutterBottom>
+    //               Upcoming Trips
+    //             </Typography>
+    //             {/* <Button className="link-btn"></Button> */}
+    //           </Link>
+    //         </div>
+    //       </div>
+    //       <div className="popular-tours">
+    //         <Typography variant="h4" gutterBottom>
+    //           Popular Tours
+    //         </Typography>
+    //         <div className="card-holder">
+    //           <TripCards
+    //             city="Heidelberg"
+    //             price="EUR 30"
+    //             image="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
+    //           />
+    //           <TripCards
+    //             city="Heidelberg"
+    //             price="EUR 30"
+    //             image="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
+    //           />
+    //           <TripCards
+    //             city="Heidelberg"
+    //             price="EUR 30"
+    //             image="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
+    //           />
+    //         </div>
+    //       </div>
+    //       <div className="discounts">
+    //         <img src={students} alt="Students" />
+    //         <div className="discount-content">
+    //           <Typography sx={{ margin: "0" }} variant="h4" gutterBottom>
+    //             Discounts
+    //           </Typography>
+    //           <Typography variant="subtitle1" gutterBottom>
+    //             You can now avail discounts if you have a valid student ID card.
+    //             Visit the student trips page to view the trips on which you can
+    //             get this offers.
+    //           </Typography>
+    //           <Link className="link-discounts" to="/trips/student">
+    //             <Typography sx={{ margin: "0" }} variant="h6" gutterBottom>
+    //               Student Trips
+    //             </Typography>
+    //           </Link>
+    //         </div>
+    //       </div>
+    //     </div>
+    //   );
+    // } else if (this.props.TSwitch) {
+    //   return (
+    //     <div className='Tritanopia-theme' style={{ filter: `brightness(${this.props.brightness_val}) contrast(${this.props.contrast_val}) saturate(${this.props.saturate_val}) grayscale(${this.props.monochrome_val})` }}>
+    //       <div className="squeeze">
+    //         <div className="sqeeze-content">
+    //           <Typography sx={{ margin: "0" }} variant="h3" gutterBottom>
+    //             Bored?
+    //           </Typography>
+    //           <Typography variant="h3" gutterBottom>
+    //             Need a getaway?
+    //           </Typography>
+    //           <Typography sx={{ color: "#8BC460" }} variant="h2" gutterBottom>
+    //             We<span style={{ color: "#E45E35" }}>GO</span>at you!
+    //           </Typography>
+
+    //           <Link className="link" to="/trips/upcoming">
+    //             <Typography sx={{ margin: "0" }} variant="h6" gutterBottom>
+    //               Upcoming Trips
+    //             </Typography>
+    //             {/* <Button className="link-btn"></Button> */}
+    //           </Link>
+    //         </div>
+    //       </div>
+    //       <div className="popular-tours">
+    //         <Typography variant="h4" gutterBottom>
+    //           Popular Tours
+    //         </Typography>
+    //         <div className="card-holder">
+    //           <TripCards
+    //             city="Heidelberg"
+    //             price="EUR 30"
+    //             image="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
+    //           />
+    //           <TripCards
+    //             city="Heidelberg"
+    //             price="EUR 30"
+    //             image="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
+    //           />
+    //           <TripCards
+    //             city="Heidelberg"
+    //             price="EUR 30"
+    //             image="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
+    //           />
+    //         </div>
+    //       </div>
+    //       <div className="discounts">
+    //         <img src={students} alt="Students" />
+    //         <div className="discount-content">
+    //           <Typography sx={{ margin: "0" }} variant="h4" gutterBottom>
+    //             Discounts
+    //           </Typography>
+    //           <Typography variant="subtitle1" gutterBottom>
+    //             You can now avail discounts if you have a valid student ID card.
+    //             Visit the student trips page to view the trips on which you can
+    //             get this offers.
+    //           </Typography>
+    //           <Link className="link-discounts" to="/trips/student">
+    //             <Typography sx={{ margin: "0" }} variant="h6" gutterBottom>
+    //               Student Trips
+    //             </Typography>
+    //           </Link>
+    //         </div>
+    //       </div>
+    //     </div>
+    //   );
+    // } else if (((this.props.DSwitch) || (this.props.PSwitch) || (this.props.TSwitch)) === false) {
+      return (
+        <div className="home" style={{ filter: `brightness(${this.props.brightness_val}) contrast(${this.props.contrast_val}) saturate(${this.props.saturate_val}) grayscale(${this.props.monochrome_val})` }}>
+          <div className="squeeze">
+            <div className="sqeeze-content">
+              <Typography sx={{ margin: "0" }} variant="h3" gutterBottom>
+                Bored?
               </Typography>
-              {/* <Button className="link-btn"></Button> */}
-            </Link>
-          </div>
-        </div>
-        <div className="popular-tours">
-          <Typography variant="h4" gutterBottom>
-            Popular Tours
-          </Typography>
-          <div className="card-holder">
-            <TripCards
-              city="Heidelberg"
-              price="EUR 30"
-              image="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
-            />
-            <TripCards
-              city="Heidelberg"
-              price="EUR 30"
-              image="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
-            />
-            <TripCards
-              city="Heidelberg"
-              price="EUR 30"
-              image="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
-            />
-          </div>
-        </div>
-        <div className="discounts">
-          <img src={students} alt="Students" />
-          <div className="discount-content">
-            <Typography sx={{ margin: "0" }} variant="h4" gutterBottom>
-              Discounts
-            </Typography>
-            <Typography variant="subtitle1" gutterBottom>
-              You can now avail discounts if you have a valid student ID card.
-              Visit the student trips page to view the trips on which you can
-              get this offers.
-            </Typography>
-            <Link className="link-discounts" to="/trips/student">
-              <Typography sx={{ margin: "0" }} variant="h6" gutterBottom>
-                Student Trips
+              <Typography variant="h3" gutterBottom>
+                Need a getaway?
               </Typography>
-            </Link>
+              <Typography sx={{ color: "#8BC460" }} variant="h2" gutterBottom>
+                We<span style={{ color: "#E45E35" }}>GO</span>at you!
+              </Typography>
+
+              <Link className="link" to="/trips/upcoming">
+                <Typography sx={{ margin: "0" }} variant="h6" gutterBottom>
+                  Upcoming Trips
+                </Typography>
+                {/* <Button className="link-btn"></Button> */}
+              </Link>
+            </div>
+          </div>
+          <div className="popular-tours">
+            <Typography variant="h4" gutterBottom>
+              Popular Tours
+            </Typography>
+            <div className="card-holder">
+              <TripCards
+                city="Heidelberg"
+                price="EUR 30"
+                image="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
+              />
+              <TripCards
+                city="Heidelberg"
+                price="EUR 30"
+                image="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
+              />
+              <TripCards
+                city="Heidelberg"
+                price="EUR 30"
+                image="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
+              />
+            </div>
+          </div>
+          <div className="discounts">
+            <img src={students} alt="Students" />
+            <div className="discount-content">
+              <Typography sx={{ margin: "0" }} variant="h4" gutterBottom>
+                Discounts
+              </Typography>
+              <Typography variant="subtitle1" gutterBottom>
+                You can now avail discounts if you have a valid student ID card.
+                Visit the student trips page to view the trips on which you can
+                get this offers.
+              </Typography>
+              <Link className="link-discounts" to="/trips/student">
+                <Typography sx={{ margin: "0" }} variant="h6" gutterBottom>
+                  Student Trips
+                </Typography>
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
-    );
+      );
+    }
+    // return (
+    //   <div className="home">
+    //     <div className="squeeze">
+    //       <div className="sqeeze-content">
+    //         <Typography sx={{ margin: "0" }} variant="h3" gutterBottom>
+    //           Bored?
+    //         </Typography>
+    //         <Typography variant="h3" gutterBottom>
+    //           Need a getaway?
+    //         </Typography>
+    //         <Typography sx={{ color: "#8BC460" }} variant="h2" gutterBottom>
+    //           We<span style={{ color: "#E45E35" }}>GO</span>at you!
+    //         </Typography>
+
+    //         <Link className="link" to="/trips/upcoming">
+    //           <Typography sx={{ margin: "0" }} variant="h6" gutterBottom>
+    //             Upcoming Trips
+    //           </Typography>
+    //           {/* <Button className="link-btn"></Button> */}
+    //         </Link>
+    //       </div>
+    //     </div>
+    //     <div className="popular-tours">
+    //       <Typography variant="h4" gutterBottom>
+    //         Popular Tours
+    //       </Typography>
+    //       <div className="card-holder">
+    //         <TripCards
+    //           city="Heidelberg"
+    //           price="EUR 30"
+    //           image="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
+    //         />
+    //         <TripCards
+    //           city="Heidelberg"
+    //           price="EUR 30"
+    //           image="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
+    //         />
+    //         <TripCards
+    //           city="Heidelberg"
+    //           price="EUR 30"
+    //           image="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
+    //         />
+    //       </div>
+    //     </div>
+    //     <div className="discounts">
+    //       <img src={students} alt="Students" />
+    //       <div className="discount-content">
+    //         <Typography sx={{ margin: "0" }} variant="h4" gutterBottom>
+    //           Discounts
+    //         </Typography>
+    //         <Typography variant="subtitle1" gutterBottom>
+    //           You can now avail discounts if you have a valid student ID card.
+    //           Visit the student trips page to view the trips on which you can
+    //           get this offers.
+    //         </Typography>
+    //         <Link className="link-discounts" to="/trips/student">
+    //           <Typography sx={{ margin: "0" }} variant="h6" gutterBottom>
+    //             Student Trips
+    //           </Typography>
+    //         </Link>
+    //       </div>
+    //     </div>
+    //   </div>
+    // );
   }
-}
+

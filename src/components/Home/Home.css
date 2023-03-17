@@ -1,34 +1,6 @@
-.Home {
-  background-color: rgb(237, 237, 247);
-  width: 80%;
-  align-items: center;
-  /* filter: brightness(2) contrast(2) */
-}
-
-.Home h1 {
-  color: #E45E35;
-}
-
-.Home h4 {
-  color: #8BC460;
-}
-
-.Home h2 {
-  color: #0B3954;
-}
-
-.Home h3 {
-  color: #EBEB3D;
-}
-
-.Home Explore {
-  display: flex;
-  gap: 10px;
-}
-
 .Deuteranopia-theme {
-  width: 80%;
-  background-color: rgb(245, 234, 243);
+  width: 100%;
+  
 }
 
 .Deuteranopia-theme h1 {
@@ -44,12 +16,12 @@
 }
 
 .Deuteranopia-theme h3 {
-  color: #e9e956;
+  color: #f4f3fc;
 }
 
 .Protanopia-theme {
-  width: 80%;
-  background-color: rgb(246, 250, 246);
+  width: 100%;
+
 }
 
 .Protanopia-theme h1 {
@@ -70,8 +42,8 @@
 }
 
 .Tritanopia-theme {
-  width: 80%;
-  background-color: rgb(232, 240, 233);
+  width: 100%;
+ 
 }
 
 .Tritanopia-theme h1 {

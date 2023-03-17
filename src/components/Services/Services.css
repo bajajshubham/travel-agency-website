@@ -2,7 +2,8 @@
     /* background-color:#222222; */
     padding:40px;
     gap: 40px;
-    color: #222;;
+    color: red;
+    background-color: #e4deeb;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -24,17 +25,21 @@
     font-size:15px;
     font-family:sans-serif;
     margin-bottom: 40px;
+    
   }
   
   .grid-item {
     display:flex;
     gap: 50px;
+   
+   
 
   }
 
   .grid-item>p{
 width: 350px;    
 text-align: left;
+
   }
 
 
@@ -42,9 +47,170 @@ text-align: left;
   width: 250px;
   height: 250px;
   place-self: center;
+  
+ 
 }
 
 .element{
- background: #e45e35;
+ background: rgb(37, 238, 37);
  height: 50px;
+}
+
+.Deuteranopia-container {
+  /* background-color:#222222; */
+  padding:40px;
+  gap: 40px;
+  color: #7b7043;
+  background-color: #f1e3e3;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size: 15px;
+  font-family:sans-serif;
+  /* margin-bottom: 40px; */
+
+}
+
+.Deuteranopia-container1{
+  /* background-color:#222222; */
+  padding:40px;
+  gap: 60px;
+  border-radius:10px;
+  color:#222;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:15px;
+  font-family:sans-serif;
+  margin-bottom: 40px;
+}
+
+.grid-item {
+  display:flex;
+  gap: 50px;
+
+}
+
+.grid-item>p{
+width: 350px;    
+text-align: left;
+}
+
+
+.images-services{
+width: 250px;
+height: 250px;
+place-self: center;
+}
+
+.Deuteranopia{
+background: #e7ca57;
+color:#222;
+height: 50px;
+}
+
+.Protanopia-container {
+  /* background-color:#222222; */
+  padding:40px;
+  gap: 40px;
+  color: #504828;
+  background-color: #e0d2d2;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size: 15px;
+  font-family:sans-serif;
+  /* margin-bottom: 40px; */
+
+}
+
+.Protanopia-container1{
+  /* background-color:#222222; */
+  padding:40px;
+  gap: 60px;
+  border-radius:10px;
+  color:#222;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:15px;
+  font-family:sans-serif;
+  margin-bottom: 40px;
+}
+
+.grid-item {
+  display:flex;
+  gap: 50px;
+
+}
+
+.grid-item>p{
+width: 350px;    
+text-align: left;
+}
+
+
+.images-services{
+width: 250px;
+height: 250px;
+place-self: center;
+}
+
+.Protanopia{
+background: #c2ad5b;
+color:#222;
+height: 50px;
+}
+
+.Tritanopia-container {
+  /* background-color:#222222; */
+  padding:40px;
+  gap: 40px;
+  color: #e71818;
+  background-color: #e9f0e7;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size: 15px;
+  font-family:sans-serif;
+  /* margin-bottom: 40px; */
+
+}
+
+.Tritanopia-container1{
+  /* background-color:#222222; */
+  padding:40px;
+  gap: 60px;
+  border-radius:10px;
+  color:#222;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:15px;
+  font-family:sans-serif;
+  margin-bottom: 40px;
+}
+
+.grid-item {
+  display:flex;
+  gap: 50px;
+
+}
+
+.grid-item>p{
+width: 350px;    
+text-align: left;
+}
+
+
+.images-services{
+width: 250px;
+height: 250px;
+place-self: center;
+}
+
+.Tritanopia{
+background: #68d1b0;
+color:#222;
+height: 50px;
 }

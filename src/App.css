@@ -15,6 +15,7 @@
   grid-area: header;
   position: sticky;
   top: 0;
+  z-index: 5;
 }
 
 .body-grid {
@@ -24,4 +25,33 @@
 
 .footer {
   grid-area: footer;
+}
+
+
+.menu-items {
+  color: rgb(21, 1, 23);
+}
+
+.menu {
+  background-color: #797070;
+  width: 325px;
+  height: 65vh;
+  overflow-y: scroll;
+  display: flex;
+  text-align: left;
+  /* align-items: flex-start; */
+  position: fixed;
+  top: 15%;
+  right: -80%;
+  transition: 800ms;
+}
+
+.menu.access-active {
+  position: fixed;
+  right: 0;
+  transition: 350ms;
+}
+
+.sidebar {
+  color: #000;
 }
