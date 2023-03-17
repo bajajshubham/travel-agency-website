@@ -9,7 +9,6 @@ import * as AiIcons from 'react-icons/ai';
 import Accessibility from "../Accessibility/Accessibility";
 import { Select, MenuItem } from "@mui/material";
 
-
 const Header = (props) => {
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);

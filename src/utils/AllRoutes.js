@@ -29,9 +29,3 @@ const AllRoutes = (props) => {
 };
 
 export default AllRoutes;
-
-
-
-
-
-

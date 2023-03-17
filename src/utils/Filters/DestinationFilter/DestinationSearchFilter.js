@@ -8,7 +8,6 @@ const DestinationSearchFilter = (props) => {
         onChange={(event, newValue) => {
           props.onValueChange(newValue);
         }}
-        
         id={props.id}
         options={props.data}
         autoHighlight
