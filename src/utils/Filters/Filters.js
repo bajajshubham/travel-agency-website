@@ -83,8 +83,7 @@ export default class Filters extends Component {
     });
     //location
     let filterLocationData = filteredBudgetData;
-    if (filterParams.lat && filterParams.long) {
-      // debugger;
+    if (filterParams.lat && filterParams.long && Number(filterParams.radius)) {
       filterLocationData = filteredBudgetData.filter((item) => {
         return geolib.isPointWithinRadius(
           { latitude: item.lat, longitude: item.long },
@@ -93,7 +92,30 @@ export default class Filters extends Component {
         );
       });
     }
-    this.setState({ filteredData: filterLocationData });
+    let categoryFilterData = [...filterLocationData];
+    let filteredData = [...filterLocationData];
+    if (!filterParams.categories.natureChecked) {
+      categoryFilterData = categoryFilterData.filter((item) => {
+        return item.category_id !== 1;
+      });
+    }
+    if (!filterParams.categories.adventureChecked) {
+      categoryFilterData = categoryFilterData.filter((item) => {
+        return item.category_id !== 2;
+      });
+    }
+    if (!filterParams.categories.historicalChecked) {
+      categoryFilterData = categoryFilterData.filter((item) => {
+        return item.category_id !== 3;
+      });
+    }
+    if (!filterParams.categories.religiousChecked) {
+      categoryFilterData = categoryFilterData.filter((item) => {
+        return item.category_id !== 4;
+      });
+    }
+    filteredData = [...categoryFilterData];
+    this.setState({ filteredData: filteredData });
   }
 
   getBudgetValues(values) {
