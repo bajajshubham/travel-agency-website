@@ -3,8 +3,8 @@ import React from "react";
 
 const TripCards = (props) => {
   return (
-    <Card sx={{ maxWidth: 345, maxHeight:350 }}>
-      <CardMedia sx={{ height: 140 }} image={props.image} title={props.city} lang={props.lang}/>
+    <Card sx={{ maxWidth: 300, maxHeight:350 }}>
+      <CardMedia sx={{ height: 140 }} image={props.image} title={props.city} />
       <CardContent>
         <div className="trip-tile-bar">
           <Typography gutterBottom variant="h5" component="div">
