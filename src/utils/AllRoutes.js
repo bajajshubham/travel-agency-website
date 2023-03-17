@@ -10,7 +10,7 @@ const AllRoutes = (props) => {
 
   return (
     <Routes>
-      <Route path="/" element={<Home lang={props.lang}/>} />
+      <Route path="/" element={<Home lang={props.lang} />} />
       <Route path="/trips" element={<Trips lang={props.lang}/>}>
         <Route path="upcoming" element={<Filters lang={props.lang} />} />
         <Route path="students" element={<Filters lang={props.lang} />} />

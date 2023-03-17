@@ -117,6 +117,7 @@ export default class Filters extends Component {
         </div>
         <div className="filter-results">
           <TripCards
+        lang={this.props.lang}
             city="Heidelberg"
             price="EUR 30"
             image="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"

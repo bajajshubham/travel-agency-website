@@ -130,6 +130,7 @@ const Header = (props) => {
         <NavLink className="nav-items" to="/help">
           {props.lang === "En" ? "Help" : props.lang === "De" ? "Hilfe" : "मदद"}
         </NavLink>
+      
       </div>
     </div>
   );

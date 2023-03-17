@@ -57,13 +57,25 @@ export default class Cards extends Component {
             return (
                 <div>
 
-                    <h2>Transportation</h2>
+                    <h2>  {props.lang === "En"
+            ? "Transportation"
+            : props.lang === "De"
+            ?"Transport"
+            :"यातायात" }</h2>
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div" justifyContent={'center'} color="blueviolet">
-                            Vehicles
+                        {props.lang === "En"
+            ? "Vehicles"
+            : props.lang === "De"
+            ?"Fahrzeuge"
+            :"वाहनों" }
                         </Typography>
                         <Typography variant="body2" color="text.secondary" justifyContent={'center'}>
-                            Select your desirable transport.
+                        {props.lang === "En"
+            ? "Select Your Desirable Transport"
+            : props.lang === "De"
+            ?"Wählen Sie Ihren gewünschten Transport aus"
+            :"अपने वांछित परिवहन का चयन करें" }
                         </Typography>
                     </CardContent>
                     <div className='card-container' >
@@ -85,13 +97,25 @@ export default class Cards extends Component {
 
 
                     </div>
-                    <h2>Accomodation</h2>
+                    <h2> {props.lang === "En"
+            ? "Accomodation"
+            : props.lang === "De"
+            ?"Unterkunft"
+            :"आवास" }   </h2>
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div" justifyContent={'center'} color="blueviolet">
-                         Hotels
-                        </Typography>
+                        {props.lang === "En"
+            ? "Hotels"
+            : props.lang === "De"
+            ?"Hotels"
+            :"होटल" }                       
+             </Typography>
                         <Typography variant="body2" color="text.secondary" justifyContent={'center'}>
-                            Select your desirable accomodation.
+                        {props.lang === "En"
+            ? "Select Your Desirable Accomodation"
+            : props.lang === "De"
+            ?"Wählen Sie Ihre gewünschte Unterkunft aus"
+            :"अपने वांछित आवास का चयन करें" }  
                         </Typography>
                     </CardContent>
                     <div className='card-container' >
@@ -120,8 +144,13 @@ export default class Cards extends Component {
             return (
                 
                 <div className='page2'>
-                <h3>Your Selected Transport</h3>    
+                <h3> {props.lang === "En"
+            ? "Your Selected Transport"
+            : props.lang === "De"
+            ?"Ihr ausgewählter Transport"
+            :"आपका चयनित परिवहन" }</h3>    
                 <CardMedia
+               
                 component="img"
                 alt="title"
                 height="250"
