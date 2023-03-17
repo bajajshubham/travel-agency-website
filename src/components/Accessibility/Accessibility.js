@@ -74,13 +74,13 @@ const Accessibility = (props) => {
         <h4>Accessibility Options</h4>
         <h4>Color Blindness Settings</h4>
         <p>Deuteranopia:
-          <Switch {...label}  disabled={toggle1} onChange={toggleDswitch}/>
+          <Switch {...label} datatest-id="Deuteranopia"  disabled={toggle1} onChange={toggleDswitch}/>
         </p>
         <p>Protanopia:
-          <Switch {...label}  disabled={toggle2} onChange={togglePswitch} />
+          <Switch {...label} datatest-id="Protanopia"  disabled={toggle2} onChange={togglePswitch} />
         </p>
         <p>Tritanopia:
-          <Switch {...label} disabled={toggle3} onChange={toggleTswitch} />
+          <Switch {...label} datatest-id="Tritanopia"  disabled={toggle3} onChange={toggleTswitch} />
         </p>
       <h4>Screen Effect Settings</h4>
       <p>Brightness</p>    
