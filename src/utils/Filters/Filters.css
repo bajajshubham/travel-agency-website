@@ -1,9 +1,25 @@
 .filter-set {
+  text-align: left;
   width: 250px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   /* margin-left: 5px; */
 }
 
 .filter-wrapper {
   display: flex;
+  gap: 30px;
+  margin: 20px 50px;
+  text-align: left;
+}
+
+.filter-results {
+  width: -webkit-fill-available
+}
+
+.place-results {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
 }

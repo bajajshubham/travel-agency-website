@@ -1,5 +1,5 @@
 .App {
-  /* text-align: center; */
+  text-align: center;
   display: grid;
   width: 100vw;
   grid-template-rows: auto 1fr auto;
@@ -15,6 +15,7 @@
   grid-area: header;
   position: sticky;
   top: 0;
+  z-index: 5;
 }
 
 .body-grid {
