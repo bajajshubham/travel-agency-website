@@ -82,7 +82,7 @@ export default class DestinationFilter extends Component {
 
   render() {
     return (
-      <div>
+      <div className="destination-filter" data-testid="destination-filter">
         <DestinationSearchFilter
           onValueChange={this.onCountryChange}
           id="country-select-demo"

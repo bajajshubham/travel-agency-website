@@ -3,7 +3,7 @@ import { Autocomplete, Box, TextField } from "@mui/material";
 
 const DestinationSearchFilter = (props) => {
   return (
-    <div>
+    <div data-testid="destination-search-filter">
       <Autocomplete
         onChange={(event, newValue) => {
           props.onValueChange(newValue);
