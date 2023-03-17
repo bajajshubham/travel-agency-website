@@ -10,15 +10,14 @@ const Footer = (props) => {
   return (
     <div className="footer">
       <div className="footer--top">
-        <div className="TnC">
-        
+        <div className="TnC">        
           <p>{props.lang === "En" ? "Privacy Policy" : props.lang === "De" ? "Datenschutz-Bestimmungen" : "गोपनीयता नीति"}</p>
           <p>{props.lang === "En" ? "Terms & Conditions" : props.lang === "De" ? "Geschäftsbedingungen" : "नियम एवं शर्तें"}</p>
           <p>{props.lang === "En" ? "About us" : props.lang === "De" ? "Über uns" : "हमारे बारे में"}</p>
-          <p>{props.lang === "En" ? "About us" : props.lang === "De" ? "Häufig gestellte Fragen" : "पूछे जाने वाले प्रश्न"}</p>
+          <p>{props.lang === "En" ? "FAQs" : props.lang === "De" ? "Häufig gestellte Fragen" : "पूछे जाने वाले प्रश्न"}</p>
         </div>
         <div className="contact">
-        <p>{props.lang === "En" ? "About us" : props.lang === "De" ? "Kontaktiere uns" : "पसंपर्क करें"}</p>
+        <p>{props.lang === "En" ? "Contact us" : props.lang === "De" ? "Kontaktiere uns" : "पसंपर्क करें"}</p>
           <div>
             <MailOutlineOutlinedIcon />
             <p>contactus@email.com</p>

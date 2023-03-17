@@ -17,6 +17,7 @@ const CategoryFilter = (props) => {
   };
 
   useEffect(() => {
+    if(props.sendCategories)
     props.sendCategories({
       natureChecked,
       adventureChecked,
@@ -24,28 +25,49 @@ const CategoryFilter = (props) => {
       religiousChecked,
     });
   }, [natureChecked, adventureChecked, historicalChecked, religiousChecked]);
-  
+
   return (
-    <div>
+    <div className="category-filter" data-testid="category-filter">
       <FormGroup>
         <FormControlLabel
-          control={<Checkbox id="1"  defaultChecked onChange={handleChange} />}
-          label= {props.lang === "En" ? "Nature" : props.lang === "De" ? "Natur" : "प्रकृति"}
+          control={<Checkbox id="1" defaultChecked onChange={handleChange} />}
+          label={
+            props.lang === "En"
+              ? "Nature"
+              : props.lang === "De"
+              ? "Natur"
+              : "प्रकृति"
+          }
         />
         <FormControlLabel
           control={<Checkbox id="2" defaultChecked onChange={handleChange} />}
-          label= {props.lang === "En" ? "Adventure" : props.lang === "De" ? "Abenteuer" : "साहसिक काम"}
-
+          label={
+            props.lang === "En"
+              ? "Adventure"
+              : props.lang === "De"
+              ? "Abenteuer"
+              : "साहसिक काम"
+          }
         />
         <FormControlLabel
           control={<Checkbox id="3" defaultChecked onChange={handleChange} />}
-          label= {props.lang === "En" ? "Historical" : props.lang === "De" ? "Historisch" : "ऐतिहासिक"}
-
+          label={
+            props.lang === "En"
+              ? "Historical"
+              : props.lang === "De"
+              ? "Historisch"
+              : "ऐतिहासिक"
+          }
         />
         <FormControlLabel
           control={<Checkbox id="4" defaultChecked onChange={handleChange} />}
-          label= {props.lang === "En" ? "Religious" : props.lang === "De" ? "Religiös" : "धार्मिक"}
-
+          label={
+            props.lang === "En"
+              ? "Religious"
+              : props.lang === "De"
+              ? "Religiös"
+              : "धार्मिक"
+          }
         />
       </FormGroup>
     </div>

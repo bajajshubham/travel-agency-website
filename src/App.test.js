@@ -1,8 +1,24 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { mount } from "enzyme";
+import { MemoryRouter } from "react-router-dom";
+import App from "./App";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe("App Component", () => {
+  let wrapper = null;
+
+  const component = (path) => {
+    return mount(
+      <MemoryRouter initialEntries={[`${path}`]}>
+        <App />
+      </MemoryRouter>
+    );
+  };
+
+  beforeEach(() => {
+    wrapper = component();
+  });
+
+  it("is rendered", () => {
+    const app = wrapper.find({ "data-testid": "App" });
+    expect(app.length).toBe(1);
+  });
 });
