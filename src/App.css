@@ -19,7 +19,7 @@
 
 .body-grid {
   grid-area: body-grid;
-  padding: 0 45px;
+  /* padding: 0 45px; */
 }
 
 .footer {
