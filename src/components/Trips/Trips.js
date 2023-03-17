@@ -1,4 +1,3 @@
-import Axios from "axios";
 import React, { useEffect } from "react";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import "./Trips.css";

@@ -51,6 +51,7 @@ export default class DestinationFilter extends Component {
         return item.city;
       });
       const uniqueCities = [...new Set(cities)];
+      
       this.setState({
         cities: uniqueCities.map((city) => {
           return { label: city };
@@ -82,7 +83,7 @@ export default class DestinationFilter extends Component {
 
   render() {
     return (
-      <div>
+      <div className="destination-filter" data-testid="destination-filter">
         <DestinationSearchFilter
           onValueChange={this.onCountryChange}
           id="country-select-demo"
