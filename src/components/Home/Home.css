@@ -1,0 +1,170 @@
+.Home {
+  background-color: rgb(237, 237, 247);
+  width: 80%;
+  align-items: center;
+  /* filter: brightness(2) contrast(2) */
+}
+
+.Home h1 {
+  color: #E45E35;
+}
+
+.Home h4 {
+  color: #8BC460;
+}
+
+.Home h2 {
+  color: #0B3954;
+}
+
+.Home h3 {
+  color: #EBEB3D;
+}
+
+.Home Explore {
+  display: flex;
+  gap: 10px;
+}
+
+.Deuteranopia-theme {
+  width: 80%;
+  background-color: rgb(245, 234, 243);
+}
+
+.Deuteranopia-theme h1 {
+  color: #869a49;
+}
+
+.Deuteranopia-theme h4 {
+  color: #ae9d5b;
+}
+
+.Deuteranopia-theme h2 {
+  color: #0B3954;
+}
+
+.Deuteranopia-theme h3 {
+  color: #e9e956;
+}
+
+.Protanopia-theme {
+  width: 80%;
+  background-color: rgb(246, 250, 246);
+}
+
+.Protanopia-theme h1 {
+  color: #566039;
+
+}
+
+.Protanopia-theme h4 {
+  color: #c1ae64;
+}
+
+.Protanopia-theme h2 {
+  color: #0B3954;
+}
+
+.Protanopia-theme h3 {
+  color: #EBEB3D;
+}
+
+.Tritanopia-theme {
+  width: 80%;
+  background-color: rgb(232, 240, 233);
+}
+
+.Tritanopia-theme h1 {
+  color: #ec6c6c;
+
+}
+
+.Tritanopia-theme h4 {
+  color: #79b5a7;
+}
+
+.Tritanopia-theme h2 {
+  color: #1a2b1d;
+}
+
+.Tritanopia-theme h3 {
+  color: #e2b0ad;
+}
+
+.home {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+}
+
+.squeeze {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/images/landingImage.jpg');
+  width: 100%;
+  height: 89.55vh;
+  padding: 0;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.sqeeze-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 50px;
+  color: #fff;
+}
+
+.link {
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #ffffff50;
+  padding: 10px;
+  background: #ffffff10;
+  border-radius: 10px;
+}
+
+.popular-tours {
+  margin: 10px 50px
+}
+
+.card-holder {
+  display: flex;
+  justify-content: space-between;
+}
+
+.discounts {
+  display: flex;
+  border: 1px solid #222;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 297px;
+  margin: 10px 50px;
+  gap: 20px
+}
+
+.discounts>img {
+  height: 297px;
+  width: 100%;
+}
+
+.discount-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px
+}
+
+.link-discounts {
+  text-decoration: none;
+  color: #222;
+  border: 1px solid #22222220;
+  padding: 10px;
+  background: #22222210;
+  border-radius: 10px;
+}
