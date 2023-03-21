@@ -51,7 +51,6 @@ export default class DestinationFilter extends Component {
         return item.city;
       });
       const uniqueCities = [...new Set(cities)];
-      
       this.setState({
         cities: uniqueCities.map((city) => {
           return { label: city };

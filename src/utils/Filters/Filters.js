@@ -83,8 +83,7 @@ export default class Filters extends Component {
     });
     //location
     let filterLocationData = filteredBudgetData;
-    if (filterParams.lat && filterParams.long) {
-      // debugger;
+    if (filterParams.lat && filterParams.long && Number(filterParams.radius)) {
       filterLocationData = filteredBudgetData.filter((item) => {
         return geolib.isPointWithinRadius(
           { latitude: item.lat, longitude: item.long },
@@ -93,7 +92,30 @@ export default class Filters extends Component {
         );
       });
     }
-    this.setState({ filteredData: filterLocationData });
+    let categoryFilterData = [...filterLocationData];
+    let filteredData = [...filterLocationData];
+    if (!filterParams.categories.natureChecked) {
+      categoryFilterData = categoryFilterData.filter((item) => {
+        return item.category_id !== 1;
+      });
+    }
+    if (!filterParams.categories.adventureChecked) {
+      categoryFilterData = categoryFilterData.filter((item) => {
+        return item.category_id !== 2;
+      });
+    }
+    if (!filterParams.categories.historicalChecked) {
+      categoryFilterData = categoryFilterData.filter((item) => {
+        return item.category_id !== 3;
+      });
+    }
+    if (!filterParams.categories.religiousChecked) {
+      categoryFilterData = categoryFilterData.filter((item) => {
+        return item.category_id !== 4;
+      });
+    }
+    filteredData = [...categoryFilterData];
+    this.setState({ filteredData: filteredData });
   }
 
   getBudgetValues(values) {
@@ -164,12 +186,6 @@ export default class Filters extends Component {
           </div>
         </div>
         <div className="filter-results">
-          <TripCards
-        lang={this.props.lang}
-            city="Heidelberg"
-            price="EUR 30"
-            image="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
-          />
           <Typography sx={{ margin: "0" }} variant="h4" gutterBottom>
             Places
           </Typography>

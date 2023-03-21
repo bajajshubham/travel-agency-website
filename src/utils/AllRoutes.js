@@ -5,20 +5,21 @@ import Home from "../components/Home/Home";
 import Services from "../components/Services/Services";
 import Trips from "../components/Trips/Trips";
 import Filters from "./Filters/Filters";
+import Upcoming from './components/Upcoming'
 
 const AllRoutes = (props) => {
 
   return (
     <Routes>
       <Route path="/" element={<Home lang={props.lang} />} />
-      <Route path="/trips" element={<Trips lang={props.lang}/>}>
-        <Route path="upcoming" element={<Filters lang={props.lang} />} />
-        <Route path="students" element={<Filters lang={props.lang} />} />
+      <Route path="/trips" element={<Trips lang={props.lang} />}>
+        <Route path="upcoming" element={<Upcoming lang={props.lang} />} />
+        {/* <Route path="students" element={<Filters lang={props.lang} />} />
         <Route path="accessible" element={<Filters lang={props.lang}/>} />
-        <Route path="plan" element={<Filters lang={props.lang} />} />
-        <Route path="findplace" element={<Filters  lang={props.lang}/>} />
+        <Route path="plan" element={<Filters lang={props.lang} />} /> */}
+        <Route path="findplace" element={<Filters lang={props.lang} />} />
       </Route>
-      <Route path="/services" element={<Services  lang={props.lang} />} />
+      <Route path="/services" element={<Services lang={props.lang} />} />
       <Route path="/help" element={<Help />} />
       <Route
         path="*"
