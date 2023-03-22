@@ -9,6 +9,7 @@
     "body-grid"
     "footer";
   align-content: space-between;
+
 }
 
 .header {
@@ -49,4 +50,22 @@
 }
 .sidebar {
   color: #000;
+=======
+}
+
+.header {
+  grid-area: header;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.body-grid {
+  grid-area: body-grid;
+  /* padding: 0 45px; */
+}
+
+.footer {
+  grid-area: footer;
+
 }
