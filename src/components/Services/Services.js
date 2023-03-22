@@ -366,7 +366,7 @@ function Services(props) {
     </div>
   );} else if(props.TSwitch){ 
     return (
-    <div>
+    <div style={{ filter: `brightness(${props.brightness_val}) contrast(${props.contrast_val}) saturate(${props.saturate_val}) grayscale(${props.monochrome_val})`}}>
      
       <h1 className="Tritanopia">
         {props.lang === "En"
