@@ -541,11 +541,6 @@ function Services(props) {
     
     return (
     <div style={{ filter: `brightness(${props.brightness_val}) contrast(${props.contrast_val}) saturate(${props.saturate_val}) grayscale(${props.monochrome_val})`}}>
-=======
-  return (
-    <div>
-
-     
       <h1 className="element">
         {props.lang === "En"
           ? "Services"
@@ -590,7 +585,7 @@ function Services(props) {
         </div>
       </div>
 
-=======
+
 
       <div className="container">
         <div className="grid-item">
@@ -602,9 +597,6 @@ function Services(props) {
                 ? "Transportmodus"
                 : "परिवहन मोड"}
             </h2>
-
-=======
-
 
             <h3>
               {props.lang === "En"
@@ -621,10 +613,6 @@ function Services(props) {
           </p>
           <img className="images-services" src={car} alt="product" />
         </div>
-
-=======
-
-
         <div className="grid-item">
           <p>
             <br />
@@ -644,9 +632,6 @@ function Services(props) {
           <img className="images-services" src={bus} alt="product" />
         </div>
       </div>
-
-=======
-
 
       <div className="container">
         <div className="grid-item">
@@ -732,9 +717,9 @@ function Services(props) {
 
   );} 
 }
-=======
-  );
-}
+
+
+
 
 
 export default Services;

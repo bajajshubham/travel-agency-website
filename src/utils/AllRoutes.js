@@ -8,10 +8,8 @@ import Filters from "./Filters/Filters";
 
 
 import Upcoming from '../components/Upcoming'
-=======
-import Upcoming from './components/Upcoming'
-=======
-import Upcoming from '../components/Upcoming'
+
+
 import Customize from '../components/Customize'
 
 
@@ -31,8 +29,8 @@ const AllRoutes = (props) => {
 
       <Route path="/services" element={<Services lang={props.lang}  brightness_val={props.brightness_val} contrast_val={props.contrast_val} saturate_val={props.saturate_val} monochrome_val={props.monochrome_val} 
       DSwitch={props.DSwitch} PSwitch={props.PSwitch} TSwitch={props.TSwitch}/>} />
-=======
-      <Route path="/services" element={<Services lang={props.lang} />} />
+
+      {/* <Route path="/services" element={<Services lang={props.lang} />} /> */}
 
       <Route path="/help" element={<Help />} />
       <Route

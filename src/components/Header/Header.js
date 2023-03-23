@@ -5,9 +5,8 @@ import {
 } from "@mui/icons-material";
 import "./Header.css";
 
-import { NavLink } from "react-router-dom";
 
-=======
+
 import { Link, NavLink } from "react-router-dom";
 import * as AiIcons from "react-icons/ai";
 import Accessibility from "../Accessibility/Accessibility";
@@ -18,7 +17,7 @@ import logo from "../../assets/logo/TG_PNG.png";
 const Header = (props) => {
 
 
-=======
+
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
   const [brightness_val, setBrightness] = useState(1);
@@ -76,9 +75,9 @@ const Header = (props) => {
 
             <AccessibilityNewIcon onClick={props.showSidebar} />
           </NavLink>
-=======
-            <AccessibilityNewIcon onClick={showSidebar} />
-          </NavLink>
+
+            {/* <AccessibilityNewIcon onClick={showSidebar} />
+          </NavLink> */}
           <nav className={sidebar ? "menu access-active" : "menu"}>
             <div className="menu-items">
               <Link>
@@ -127,9 +126,9 @@ const Header = (props) => {
 
               ? "Startseite"
               : "घर"}
-=======
-            ? "Startseite"
-            : "घर"}
+
+            {/* ? "Startseite"
+            : "घर"} */}
 
         </NavLink>
         <NavLink className="nav-items" to="/trips">
@@ -139,9 +138,9 @@ const Header = (props) => {
 
               ? "Reisen"
               : "यात्राएं"}
-=======
+{/* 
             ? "Reisen"
-            : "यात्राएं"}
+            : "यात्राएं"} */}
 
         </NavLink>
         <NavLink className="nav-items" to="/services">
@@ -151,9 +150,9 @@ const Header = (props) => {
 
               ? "Dienstleistungen"
               : "सेवाएं"}
-=======
+{/* 
             ? "Dienstleistungen"
-            : "सेवाएं"}
+            : "सेवाएं"} */}
 
         </NavLink>
         <NavLink className="nav-items" to="/help">
@@ -166,6 +165,5 @@ const Header = (props) => {
 
 
 export default Header;
-=======
-export default Header;
+
 
