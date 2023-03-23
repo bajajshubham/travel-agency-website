@@ -4,13 +4,20 @@ import {
   Language as LanguageIcon,
 } from "@mui/icons-material";
 import "./Header.css";
+
+
+
 import { Link, NavLink } from "react-router-dom";
 import * as AiIcons from "react-icons/ai";
 import Accessibility from "../Accessibility/Accessibility";
+
 import { Select, MenuItem } from "@mui/material";
 import logo from "../../assets/logo/TG_PNG.png";
 
 const Header = (props) => {
+
+
+
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
   const [brightness_val, setBrightness] = useState(1);
@@ -53,6 +60,7 @@ const Header = (props) => {
   const getTSwitchState = (Tval) => {
     setTSwitch(Tval);
   };
+
   return (
     <div className="header">
       <div className="header-top-part">
@@ -64,8 +72,12 @@ const Header = (props) => {
         </div>
         <div className="activity">
           <NavLink className="accessibility-icon">
-            <AccessibilityNewIcon onClick={showSidebar} />
+
+            <AccessibilityNewIcon onClick={props.showSidebar} />
           </NavLink>
+
+            {/* <AccessibilityNewIcon onClick={showSidebar} />
+          </NavLink> */}
           <nav className={sidebar ? "menu access-active" : "menu"}>
             <div className="menu-items">
               <Link>
@@ -89,6 +101,7 @@ const Header = (props) => {
               />
             </div>
           </nav>
+
           <span>
             <LanguageIcon />
           </span>
@@ -110,22 +123,37 @@ const Header = (props) => {
           {props.lang === "En"
             ? "Home"
             : props.lang === "De"
-            ? "Startseite"
-            : "घर"}
+
+              ? "Startseite"
+              : "घर"}
+
+            {/* ? "Startseite"
+            : "घर"} */}
+
         </NavLink>
         <NavLink className="nav-items" to="/trips">
           {props.lang === "En"
             ? "Trips"
             : props.lang === "De"
+
+              ? "Reisen"
+              : "यात्राएं"}
+{/* 
             ? "Reisen"
-            : "यात्राएं"}
+            : "यात्राएं"} */}
+
         </NavLink>
         <NavLink className="nav-items" to="/services">
           {props.lang === "En"
             ? "Services"
             : props.lang === "De"
+
+              ? "Dienstleistungen"
+              : "सेवाएं"}
+{/* 
             ? "Dienstleistungen"
-            : "सेवाएं"}
+            : "सेवाएं"} */}
+
         </NavLink>
         <NavLink className="nav-items" to="/help">
           {props.lang === "En" ? "Help" : props.lang === "De" ? "Hilfe" : "मदद"}
@@ -135,4 +163,7 @@ const Header = (props) => {
   );
 };
 
+
 export default Header;
+
+
