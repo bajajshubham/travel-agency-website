@@ -541,7 +541,7 @@ function Services(props) {
     
     return (
     <div style={{ filter: `brightness(${props.brightness_val}) contrast(${props.contrast_val}) saturate(${props.saturate_val}) grayscale(${props.monochrome_val})`}}>
-      <h1 className="element">
+      <h1 className="titlebar">
         {props.lang === "En"
           ? "Services"
           : props.lang === "De"
@@ -670,7 +670,7 @@ function Services(props) {
         </div>
       </div>
       <br />
-      <h1 className="element">
+      <h1 className="titlebar">
         {props.lang === "En"
           ? "Facilities"
           : props.lang === "De"

@@ -46,8 +46,8 @@ place-self: center;
 
 
 }
-.element{
-background: rgb(37, 238, 37);
+.titlebar{
+ background:  rgb(37, 238, 37) !important; 
 height: 50px;
 }
 .Deuteranopia-container {
