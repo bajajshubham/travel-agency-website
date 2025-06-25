@@ -1,6 +1,14 @@
-# Getting Started with Create React App
+# Travel GoAt  <img src="https://github.com/bajajshubham/travel-agency-website/blob/main/src/assets/logo/TG_PNG.png" alt="Travel GoAt logo" width="40"/>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A travel agency website built to showcase *RESTful APIs* and *Frontend* development skills. This website is only for educational purpose and should **NOT** be used for commercial or business purpose.
+
+## Demonstration
+
+### Change/Translate Language fearture
+<img src="https://github.com/user-attachments/assets/41d6cac0-68fe-4756-9dfe-9ae6edfc0c5a" alt="Translate Language gif" width="95%"/>
+
+### Filter tourist places fearture
+![placefiltergif-ezgif com-resize](https://github.com/user-attachments/assets/a40f5daf-0381-4d34-b892-10528e11e2d7)
 
 ## Available Scripts
 
@@ -11,13 +19,12 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The page will reload when you make changes.
 
-### `npm test`
+### `npm run db`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Runs the backend server (json-server) on port `5000`.\
+All the API Endpoints are defined by json-server and should be ran before running `npm start`.
 
 ### `npm run build`
 
@@ -39,32 +46,13 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Steps to reproduce
+1. Clone the repository by running command `git clone https://github.com/bajajshubham/travel-agency-website.git`
+2. Go to the cloned directory using *cd* commands. - `cd travel-agency-website`
+3. Run the backend server first using command `npm run db`. You can change the port in *package.json* under scripts.
+4. Now run `npm start` to start the application.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contact: [ex5iju5gy@mozmail.com](mailto:ex5iju5gy@mozmail.com)
+The original email is masked using [firefox relay](https://relay.firefox.com/) for security purposes.
+While send email please use following structure for email subject (without quotes)
+"Regarding *<project_name>* : *<your_query>*
